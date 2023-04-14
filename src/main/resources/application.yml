@@ -1,0 +1,18 @@
+server:
+  port: 8080
+
+spring:
+  datasource:
+    username: cmit
+    password: Svw12345
+    url: jdbc:oracle:thin:@racatscan.csvw.com:1521/racat
+    type: com.zaxxer.hikari.HikariDataSource
+#  application:
+    name: SVCD-MOBILE-SERVICE #指定服务名
+
+eureka:
+  client:
+    serviceUrl: #Eureka客户端与Eureka服务端进行交互的地址
+      defaultZone: http://svcd-eureka.testapps.ocp.csvw.com/eureka/
+  instance:
+    prefer-ip-address:  true  #将自己的ip地址注册到Eureka服务中
